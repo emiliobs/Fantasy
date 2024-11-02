@@ -35,7 +35,7 @@ namespace Fantasy.Frontend.Pages.Countries
                 ShowConfirmButton = true,
                 Timer = 3000
             });
-            await toast.FireAsync(icon: SweetAlertIcon.Success, message: Localizer["RecordCreatedOk"]);
+            await toast.FireAsync(icon: SweetAlertIcon.Success, message: Localizer["RecordCreatedOK"]);
         }
 
         private void Return()

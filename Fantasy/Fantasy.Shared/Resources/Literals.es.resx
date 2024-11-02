@@ -163,4 +163,7 @@
   <data name="Yes" xml:space="preserve">
     <value>Si</value>
   </data>
+  <data name="RecordCreatedOK" xml:space="preserve">
+    <value>Registro Creado con éxito</value>
+  </data>
 </root>
