@@ -65,7 +65,7 @@ namespace Fantasy.Frontend.Repositories
             var messajeContent = new StringContent(messajeJson, Encoding.UTF8, "application/json");
             var responseHttp = await _httpClient.PutAsync(url, messajeContent);
 
-            return new HttpResponseWrapper<object>(null, responseHttp.IsSuccessStatusCode, responseHttp);
+            return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode, responseHttp);
         }
 
         public async Task<HttpResponseWrapper<TActionResponse>> PutAsync<T, TActionResponse>(string url, T Model)

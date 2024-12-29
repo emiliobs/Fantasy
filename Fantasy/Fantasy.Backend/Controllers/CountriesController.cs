@@ -53,7 +53,7 @@ public class CountriesController : ControllerBase
         currentCountry.Name = country.Name;
         _context.Update(currentCountry);
         await _context.SaveChangesAsync();
-        return NoContent();
+        return Ok(country);
     }
 
     [HttpDelete("{id}")]
