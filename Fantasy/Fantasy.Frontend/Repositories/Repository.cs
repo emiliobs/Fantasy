@@ -21,7 +21,7 @@ namespace Fantasy.Frontend.Repositories
         {
             var responseHttp = await _httpClient.DeleteAsync(url);
 
-            return new HttpResponseWrapper<object>(null, responseHttp.IsSuccessStatusCode, responseHttp);
+            return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode, responseHttp);
         }
 
         public async Task<HttpResponseWrapper<T>> GetAsync<T>(string url)
